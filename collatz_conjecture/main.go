@@ -1,14 +1,19 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func main() {
-	result := solve(3)
-	fmt.Println(result)
+	fmt.Println(solve(3344345424353))
+	fmt.Println(solve(33543))
 }
 
-func solve(n int) (result []int) {
-
+func solve(n int64) (result []int64) {
+	if n > int64(math.Pow(10, 6)) {
+		return
+	}
 	result = append(result, n)
 
 	for n > 1 {
